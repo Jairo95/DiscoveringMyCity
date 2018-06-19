@@ -51,6 +51,15 @@
                                     <tabBarItem systemItem="more" id="lYp-Xy-0QJ"/>
                                 </items>
                             </tabBar>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1a8-TP-p8y">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="PERFIL" id="SSx-4M-oxj">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="IGH-G6-aB8"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="lUh-QY-GxW"/>
@@ -167,12 +176,21 @@
                                 </items>
                             </tabBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xFP-oS-BCI">
-                                <rect key="frame" x="61" y="43" width="31" height="30"/>
+                                <rect key="frame" x="61" y="66" width="31" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Foto"/>
                             </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5KI-7G-gzC">
+                                <rect key="frame" x="0.0" y="-1" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="AGREGAR" id="alT-SF-lTd">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="oP6-om-7FB"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUZ-oc-03o">
-                                <rect key="frame" x="261" y="43" width="69" height="30"/>
+                                <rect key="frame" x="262" y="66" width="69" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Ubicacion"/>
                             </button>
