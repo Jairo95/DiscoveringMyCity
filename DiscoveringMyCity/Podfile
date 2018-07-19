@@ -1,0 +1,26 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'DiscoveringMyCity' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  pod 'GoogleMaps'
+  pod 'GooglePlaces'
+  pod 'Alamofire', '~> 4.7'
+  pod 'AlamofireImage', '~> 3.3'
+  pod 'RealmSwift'
+
+  # Pods for DiscoveringMyCity
+
+  target 'DiscoveringMyCityTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'DiscoveringMyCityUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
