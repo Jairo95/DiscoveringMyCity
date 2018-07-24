@@ -34,6 +34,11 @@ class HomeController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func shiwCategoryHealth(_ sender: Any) {
+        let category = Category(name: "Salud")
+        self.category = category
+        self.showCategory(category: category)
+    }
     
     @IBAction func showCategoryRestaurant(_ sender: Any) {
         let category = Category(name: "restaurant")

@@ -22,6 +22,8 @@
 		B910D0832100EE5E0010CBF0 /* CategoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B910D0822100EE5E0010CBF0 /* CategoryManager.swift */; };
 		B910D0852100EE6D0010CBF0 /* PlaceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B910D0842100EE6D0010CBF0 /* PlaceManager.swift */; };
 		B9511C7D20D935B2003FE794 /* ByProfileStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9511C7C20D935B2003FE794 /* ByProfileStoryBoard.storyboard */; };
+		C005D53D210758CB0050F8DC /* ConfigurationStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C005D53C210758CB0050F8DC /* ConfigurationStoryboard.storyboard */; };
+		C005D53F21075B650050F8DC /* AddStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C005D53E21075B650050F8DC /* AddStoryboard.storyboard */; };
 		C093025020D90F3200A129EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C093024F20D90F3200A129EE /* AppDelegate.swift */; };
 		C093025220D90F3200A129EE /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C093025120D90F3200A129EE /* HomeController.swift */; };
 		C093025520D90F3300A129EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C093025320D90F3300A129EE /* Main.storyboard */; };
@@ -69,6 +71,8 @@
 		B910D0842100EE6D0010CBF0 /* PlaceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceManager.swift; sourceTree = "<group>"; };
 		B9511C7C20D935B2003FE794 /* ByProfileStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ByProfileStoryBoard.storyboard; sourceTree = "<group>"; };
 		BA41E780A3F1A079AE944FF3 /* Pods-DiscoveringMyCity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiscoveringMyCity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DiscoveringMyCity/Pods-DiscoveringMyCity.debug.xcconfig"; sourceTree = "<group>"; };
+		C005D53C210758CB0050F8DC /* ConfigurationStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ConfigurationStoryboard.storyboard; sourceTree = "<group>"; };
+		C005D53E21075B650050F8DC /* AddStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddStoryboard.storyboard; sourceTree = "<group>"; };
 		C093024C20D90F3200A129EE /* DiscoveringMyCity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiscoveringMyCity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C093024F20D90F3200A129EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C093025120D90F3200A129EE /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -196,6 +200,8 @@
 				C093025820D90F3300A129EE /* LaunchScreen.storyboard */,
 				C093025B20D90F3300A129EE /* Info.plist */,
 				B9511C7C20D935B2003FE794 /* ByProfileStoryBoard.storyboard */,
+				C005D53C210758CB0050F8DC /* ConfigurationStoryboard.storyboard */,
+				C005D53E21075B650050F8DC /* AddStoryboard.storyboard */,
 			);
 			path = DiscoveringMyCity;
 			sourceTree = "<group>";
@@ -342,6 +348,8 @@
 			files = (
 				C093025A20D90F3300A129EE /* LaunchScreen.storyboard in Resources */,
 				C093025720D90F3300A129EE /* Assets.xcassets in Resources */,
+				C005D53F21075B650050F8DC /* AddStoryboard.storyboard in Resources */,
+				C005D53D210758CB0050F8DC /* ConfigurationStoryboard.storyboard in Resources */,
 				B9511C7D20D935B2003FE794 /* ByProfileStoryBoard.storyboard in Resources */,
 				C093025520D90F3300A129EE /* Main.storyboard in Resources */,
 			);
