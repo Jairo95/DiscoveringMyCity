@@ -19,50 +19,50 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="z13-ls-giU">
-                                <rect key="frame" x="30" y="199" width="91" height="120"/>
+                                <rect key="frame" x="30" y="199" width="91" height="399"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tRC-ed-gJ4">
-                                        <rect key="frame" x="19" y="0.0" width="53" height="30"/>
+                                        <rect key="frame" x="19" y="0.0" width="53" height="100"/>
                                         <state key="normal" title="Hoteles"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nM0-eI-iRr">
-                                        <rect key="frame" x="26" y="30" width="39" height="30"/>
+                                        <rect key="frame" x="26" y="100" width="39" height="99.5"/>
                                         <state key="normal" title="Bares"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yq4-5H-0vd">
-                                        <rect key="frame" x="0.0" y="60" width="91" height="30"/>
+                                        <rect key="frame" x="0.0" y="199.5" width="91" height="100"/>
                                         <state key="normal" title="Restaurantes"/>
                                         <connections>
                                             <action selector="showCategoryRestaurant:" destination="mSf-KK-mLI" eventType="touchUpInside" id="L2b-A9-jnX"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEi-N1-6sQ">
-                                        <rect key="frame" x="26" y="90" width="39" height="30"/>
+                                        <rect key="frame" x="26" y="299.5" width="39" height="99.5"/>
                                         <state key="normal" title="Cines"/>
                                     </button>
                                 </subviews>
                                 <variation key="heightClass=regular" axis="vertical"/>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="KFh-YP-M1C">
-                                <rect key="frame" x="236" y="199" width="109" height="120"/>
+                                <rect key="frame" x="236" y="199" width="109" height="399"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O0G-Ka-0Je">
-                                        <rect key="frame" x="0.0" y="0.0" width="81" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="81" height="100"/>
                                         <state key="normal" title="Gasolineras"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2UN-8B-Cjz">
-                                        <rect key="frame" x="0.0" y="30" width="39" height="30"/>
+                                        <rect key="frame" x="0.0" y="100" width="39" height="99.5"/>
                                         <state key="normal" title="Salud"/>
                                         <connections>
                                             <action selector="shiwCategoryHealth:" destination="mSf-KK-mLI" eventType="touchUpInside" id="FeP-02-kbP"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBQ-Ou-r29">
-                                        <rect key="frame" x="0.0" y="60" width="109" height="30"/>
+                                        <rect key="frame" x="0.0" y="199.5" width="109" height="100"/>
                                         <state key="normal" title="Supermercados"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIz-Al-pFW">
-                                        <rect key="frame" x="0.0" y="90" width="51" height="30"/>
+                                        <rect key="frame" x="0.0" y="299.5" width="51" height="99.5"/>
                                         <state key="normal" title="Bancos"/>
                                     </button>
                                 </subviews>
@@ -89,11 +89,15 @@
                             <constraint firstItem="kis-x0-o6Q" firstAttribute="trailing" secondItem="KFh-YP-M1C" secondAttribute="trailing" constant="30" id="ghZ-zt-U5W"/>
                             <constraint firstItem="KFh-YP-M1C" firstAttribute="top" secondItem="nTT-Fp-yCt" secondAttribute="bottom" constant="20" id="n1j-AB-PY3"/>
                             <constraint firstItem="nTT-Fp-yCt" firstAttribute="centerX" secondItem="ruP-e0-twU" secondAttribute="centerX" id="nII-tN-dwL"/>
+                            <constraint firstItem="kis-x0-o6Q" firstAttribute="bottom" secondItem="KFh-YP-M1C" secondAttribute="bottom" constant="20" id="od5-uk-k2u"/>
+                            <constraint firstItem="kis-x0-o6Q" firstAttribute="bottom" secondItem="z13-ls-giU" secondAttribute="bottom" constant="20" id="xhV-HV-83H"/>
                             <constraint firstItem="z13-ls-giU" firstAttribute="top" secondItem="nTT-Fp-yCt" secondAttribute="bottom" constant="20" id="zPA-3T-bGk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kis-x0-o6Q"/>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="od5-uk-k2u"/>
+                                <exclude reference="xhV-HV-83H"/>
                                 <exclude reference="P8j-AV-OOR"/>
                                 <exclude reference="D9M-3b-MA5"/>
                                 <exclude reference="Ock-e7-bgQ"/>
@@ -109,6 +113,8 @@
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="constraints">
+                                <include reference="od5-uk-k2u"/>
+                                <include reference="xhV-HV-83H"/>
                                 <include reference="n1j-AB-PY3"/>
                             </mask>
                         </variation>
