@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cwS-Y0-gjU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cwS-Y0-gjU">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,94 +18,98 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Encuentra lugares cerca de ti..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nTT-Fp-yCt">
-                                <rect key="frame" x="22" y="94" width="330" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="CJO-GL-yg3">
-                                <rect key="frame" x="226" y="154" width="109" height="400"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="z13-ls-giU">
+                                <rect key="frame" x="30" y="199" width="91" height="120"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tRC-ed-gJ4">
+                                        <rect key="frame" x="19" y="0.0" width="53" height="30"/>
+                                        <state key="normal" title="Hoteles"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nM0-eI-iRr">
+                                        <rect key="frame" x="26" y="30" width="39" height="30"/>
+                                        <state key="normal" title="Bares"/>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yq4-5H-0vd">
-                                        <rect key="frame" x="9" y="0.0" width="91" height="100"/>
+                                        <rect key="frame" x="0.0" y="60" width="91" height="30"/>
                                         <state key="normal" title="Restaurantes"/>
                                         <connections>
                                             <action selector="showCategoryRestaurant:" destination="mSf-KK-mLI" eventType="touchUpInside" id="L2b-A9-jnX"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEi-N1-6sQ">
-                                        <rect key="frame" x="35" y="100" width="39" height="100"/>
+                                        <rect key="frame" x="26" y="90" width="39" height="30"/>
                                         <state key="normal" title="Cines"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBQ-Ou-r29">
-                                        <rect key="frame" x="0.0" y="200" width="109" height="100"/>
-                                        <state key="normal" title="Supermercados"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIz-Al-pFW">
-                                        <rect key="frame" x="29" y="300" width="51" height="100"/>
-                                        <state key="normal" title="Bancos"/>
-                                    </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="400" id="cIW-7W-Pad"/>
-                                </constraints>
-                                <variation key="heightClass=compact" alignment="center" axis="horizontal" spacing="50"/>
+                                <variation key="heightClass=regular" axis="vertical"/>
                             </stackView>
-                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5uf-BF-VFx">
-                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <items>
-                                    <tabBarItem title="Perfil" id="qNd-rc-q6q"/>
-                                    <tabBarItem title="Agregar" id="ccT-N7-NUI"/>
-                                    <tabBarItem title="Configuración" id="sMk-0x-Q9A"/>
-                                </items>
-                            </tabBar>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="l45-f0-mfw">
-                                <rect key="frame" x="40" y="154" width="81" height="400"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="KFh-YP-M1C">
+                                <rect key="frame" x="236" y="199" width="109" height="120"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tRC-ed-gJ4">
-                                        <rect key="frame" x="14" y="0.0" width="53" height="94"/>
-                                        <state key="normal" title="Hoteles"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nM0-eI-iRr">
-                                        <rect key="frame" x="21" y="102" width="39" height="94"/>
-                                        <state key="normal" title="Bares"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O0G-Ka-0Je">
+                                        <rect key="frame" x="0.0" y="0.0" width="81" height="30"/>
+                                        <state key="normal" title="Gasolineras"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2UN-8B-Cjz">
-                                        <rect key="frame" x="21" y="204" width="39" height="94"/>
+                                        <rect key="frame" x="0.0" y="30" width="39" height="30"/>
                                         <state key="normal" title="Salud"/>
                                         <connections>
                                             <action selector="shiwCategoryHealth:" destination="mSf-KK-mLI" eventType="touchUpInside" id="FeP-02-kbP"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O0G-Ka-0Je">
-                                        <rect key="frame" x="0.0" y="306" width="81" height="94"/>
-                                        <state key="normal" title="Gasolineras"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBQ-Ou-r29">
+                                        <rect key="frame" x="0.0" y="60" width="109" height="30"/>
+                                        <state key="normal" title="Supermercados"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIz-Al-pFW">
+                                        <rect key="frame" x="0.0" y="90" width="51" height="30"/>
+                                        <state key="normal" title="Bancos"/>
                                     </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="400" id="xk3-Ex-Y92"/>
-                                </constraints>
-                                <variation key="heightClass=compact" alignment="top" axis="horizontal" distribution="fillEqually" spacing="70"/>
+                                <variation key="heightClass=compact" alignment="bottom"/>
+                                <variation key="heightClass=regular" axis="vertical"/>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Encuentra lugares cerca de ti..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nTT-Fp-yCt">
+                                <rect key="frame" x="22" y="79" width="330" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="09c-V5-zZ9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="5uf-BF-VFx" secondAttribute="trailing" id="3DD-vq-rZk"/>
-                            <constraint firstItem="kis-x0-o6Q" firstAttribute="trailing" secondItem="CJO-GL-yg3" secondAttribute="trailing" constant="40" id="5x9-to-gbC"/>
-                            <constraint firstItem="nTT-Fp-yCt" firstAttribute="centerX" secondItem="ruP-e0-twU" secondAttribute="centerX" id="C5A-aJ-AEy"/>
-                            <constraint firstItem="l45-f0-mfw" firstAttribute="leading" secondItem="kis-x0-o6Q" secondAttribute="leading" constant="40" id="Cjf-2I-HAX"/>
-                            <constraint firstAttribute="bottom" secondItem="5uf-BF-VFx" secondAttribute="bottom" id="Ie3-hp-G8l"/>
-                            <constraint firstItem="5uf-BF-VFx" firstAttribute="leading" secondItem="ruP-e0-twU" secondAttribute="leading" id="OpT-vw-TYB"/>
-                            <constraint firstItem="l45-f0-mfw" firstAttribute="top" secondItem="nTT-Fp-yCt" secondAttribute="bottom" constant="30" id="agL-ty-dNF"/>
-                            <constraint firstItem="nTT-Fp-yCt" firstAttribute="top" secondItem="kis-x0-o6Q" secondAttribute="top" constant="30" id="kw1-kI-6Cw"/>
-                            <constraint firstItem="CJO-GL-yg3" firstAttribute="top" secondItem="nTT-Fp-yCt" secondAttribute="bottom" constant="30" id="rSh-Cq-Xnc"/>
+                            <constraint firstItem="nTT-Fp-yCt" firstAttribute="top" secondItem="kis-x0-o6Q" secondAttribute="top" constant="15" id="0jK-FM-Kyu"/>
+                            <constraint firstItem="KFh-YP-M1C" firstAttribute="centerX" secondItem="ruP-e0-twU" secondAttribute="centerX" id="D9M-3b-MA5"/>
+                            <constraint firstItem="z13-ls-giU" firstAttribute="leading" secondItem="kis-x0-o6Q" secondAttribute="leading" constant="30" id="KrZ-px-H0s"/>
+                            <constraint firstItem="KFh-YP-M1C" firstAttribute="top" secondItem="z13-ls-giU" secondAttribute="bottom" constant="30" id="Ock-e7-bgQ"/>
+                            <constraint firstItem="z13-ls-giU" firstAttribute="centerX" secondItem="ruP-e0-twU" secondAttribute="centerX" id="P8j-AV-OOR"/>
+                            <constraint firstItem="kis-x0-o6Q" firstAttribute="trailing" secondItem="KFh-YP-M1C" secondAttribute="trailing" constant="30" id="ghZ-zt-U5W"/>
+                            <constraint firstItem="KFh-YP-M1C" firstAttribute="top" secondItem="nTT-Fp-yCt" secondAttribute="bottom" constant="20" id="n1j-AB-PY3"/>
+                            <constraint firstItem="nTT-Fp-yCt" firstAttribute="centerX" secondItem="ruP-e0-twU" secondAttribute="centerX" id="nII-tN-dwL"/>
+                            <constraint firstItem="z13-ls-giU" firstAttribute="top" secondItem="nTT-Fp-yCt" secondAttribute="bottom" constant="20" id="zPA-3T-bGk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kis-x0-o6Q"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="P8j-AV-OOR"/>
+                                <exclude reference="D9M-3b-MA5"/>
+                                <exclude reference="Ock-e7-bgQ"/>
+                                <exclude reference="n1j-AB-PY3"/>
+                            </mask>
+                        </variation>
                         <variation key="heightClass=compact">
                             <mask key="constraints">
-                                <include reference="C5A-aJ-AEy"/>
+                                <include reference="P8j-AV-OOR"/>
+                                <include reference="D9M-3b-MA5"/>
+                                <include reference="Ock-e7-bgQ"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="constraints">
+                                <include reference="n1j-AB-PY3"/>
                             </mask>
                         </variation>
                     </view>
@@ -117,7 +120,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VOD-bK-se1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-366" y="-266"/>
+            <point key="canvasLocation" x="-367.19999999999999" y="-266.71664167916043"/>
         </scene>
         <!--ByProfileStoryBoard-->
         <scene sceneID="OAv-8Q-u76">
@@ -129,10 +132,10 @@
             </objects>
             <point key="canvasLocation" x="-501" y="411"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View ControllerJ-->
         <scene sceneID="w1h-ns-Wms">
             <objects>
-                <tabBarController id="cwS-Y0-gjU" sceneMemberID="viewController">
+                <tabBarController id="cwS-Y0-gjU" customClass="TabBarViewControllerJ" customModule="DiscoveringMyCity" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lJP-mN-6FX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -202,9 +205,7 @@
                     </view>
                     <connections>
                         <outlet property="categoryName" destination="W7U-oa-5Wo" id="x0T-jb-Izy"/>
-                        <segue destination="cxA-QS-P18" kind="show" id="diV-K7-ekM">
-                            <nil key="action"/>
-                        </segue>
+                        <segue destination="cxA-QS-P18" kind="show" id="diV-K7-ekM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dao-yZ-sfn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -269,7 +270,7 @@
         <scene sceneID="ajm-bV-3bd">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tsq-f9-ywv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Inicio" id="Nzj-iG-FYO"/>
+                    <tabBarItem key="tabBarItem" title="Inicio" image="home" id="Nzj-iG-FYO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zYN-0C-xo5">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -285,4 +286,7 @@
             <point key="canvasLocation" x="-1124" y="16"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="home" width="30" height="30"/>
+    </resources>
 </document>
