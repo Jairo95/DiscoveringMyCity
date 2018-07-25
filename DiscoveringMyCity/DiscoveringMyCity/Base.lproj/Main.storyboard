@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home Controller-->
+        <!--Inicio-->
         <scene sceneID="UHQ-f2-RXD">
             <objects>
                 <viewController id="mSf-KK-mLI" customClass="HomeController" customModule="DiscoveringMyCity" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,74 +18,116 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Encuentra lugares cerca de ti..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nTT-Fp-yCt">
-                                <rect key="frame" x="24" y="45" width="326" height="77"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="z13-ls-giU">
+                                <rect key="frame" x="30" y="199" width="91" height="399"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tRC-ed-gJ4">
+                                        <rect key="frame" x="19" y="0.0" width="53" height="100"/>
+                                        <state key="normal" title="Hoteles"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nM0-eI-iRr">
+                                        <rect key="frame" x="26" y="100" width="39" height="99.5"/>
+                                        <state key="normal" title="Bares"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yq4-5H-0vd">
+                                        <rect key="frame" x="0.0" y="199.5" width="91" height="100"/>
+                                        <state key="normal" title="Restaurantes"/>
+                                        <connections>
+                                            <action selector="showCategoryRestaurant:" destination="mSf-KK-mLI" eventType="touchUpInside" id="L2b-A9-jnX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEi-N1-6sQ">
+                                        <rect key="frame" x="26" y="299.5" width="39" height="99.5"/>
+                                        <state key="normal" title="Cines"/>
+                                    </button>
+                                </subviews>
+                                <variation key="heightClass=regular" axis="vertical"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="KFh-YP-M1C">
+                                <rect key="frame" x="236" y="199" width="109" height="399"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O0G-Ka-0Je">
+                                        <rect key="frame" x="0.0" y="0.0" width="81" height="100"/>
+                                        <state key="normal" title="Gasolineras"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2UN-8B-Cjz">
+                                        <rect key="frame" x="0.0" y="100" width="39" height="99.5"/>
+                                        <state key="normal" title="Salud"/>
+                                        <connections>
+                                            <action selector="shiwCategoryHealth:" destination="mSf-KK-mLI" eventType="touchUpInside" id="FeP-02-kbP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBQ-Ou-r29">
+                                        <rect key="frame" x="0.0" y="199.5" width="109" height="100"/>
+                                        <state key="normal" title="Supermercados"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIz-Al-pFW">
+                                        <rect key="frame" x="0.0" y="299.5" width="51" height="99.5"/>
+                                        <state key="normal" title="Bancos"/>
+                                    </button>
+                                </subviews>
+                                <variation key="heightClass=compact" alignment="bottom"/>
+                                <variation key="heightClass=regular" axis="vertical"/>
+                            </stackView>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5uf-BF-VFx">
+                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items/>
+                            </tabBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Encuentra lugares cerca de ti..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nTT-Fp-yCt">
+                                <rect key="frame" x="22" y="79" width="330" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="09c-V5-zZ9"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tRC-ed-gJ4">
-                                <rect key="frame" x="77" y="169" width="53" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Hoteles"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yq4-5H-0vd">
-                                <rect key="frame" x="210" y="169" width="91" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Restaurantes"/>
-                                <connections>
-                                    <action selector="showCategoryRestaurant:" destination="mSf-KK-mLI" eventType="touchUpInside" id="L2b-A9-jnX"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nM0-eI-iRr">
-                                <rect key="frame" x="84" y="255" width="39" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Bares"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEi-N1-6sQ">
-                                <rect key="frame" x="236" y="255" width="39" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Cines"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2UN-8B-Cjz">
-                                <rect key="frame" x="84" y="337" width="39" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Salud"/>
-                                <connections>
-                                    <action selector="shiwCategoryHealth:" destination="mSf-KK-mLI" eventType="touchUpInside" id="FeP-02-kbP"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBQ-Ou-r29">
-                                <rect key="frame" x="201" y="337" width="109" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Supermercados"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O0G-Ka-0Je">
-                                <rect key="frame" x="63" y="435" width="81" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Gasolineras"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIz-Al-pFW">
-                                <rect key="frame" x="230" y="435" width="51" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Bancos"/>
-                            </button>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5uf-BF-VFx">
-                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <items>
-                                    <tabBarItem title="Perfil" id="qNd-rc-q6q"/>
-                                    <tabBarItem title="Agregar" id="ccT-N7-NUI"/>
-                                    <tabBarItem title="Configuración" id="sMk-0x-Q9A"/>
-                                </items>
-                            </tabBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nTT-Fp-yCt" firstAttribute="top" secondItem="kis-x0-o6Q" secondAttribute="top" constant="15" id="0jK-FM-Kyu"/>
+                            <constraint firstItem="KFh-YP-M1C" firstAttribute="centerX" secondItem="ruP-e0-twU" secondAttribute="centerX" id="D9M-3b-MA5"/>
+                            <constraint firstItem="5uf-BF-VFx" firstAttribute="top" secondItem="KFh-YP-M1C" secondAttribute="bottom" constant="20" id="HBh-HP-euy"/>
+                            <constraint firstItem="5uf-BF-VFx" firstAttribute="leading" secondItem="ruP-e0-twU" secondAttribute="leading" id="J9C-wz-Gcd"/>
+                            <constraint firstItem="z13-ls-giU" firstAttribute="leading" secondItem="kis-x0-o6Q" secondAttribute="leading" constant="30" id="KrZ-px-H0s"/>
+                            <constraint firstItem="KFh-YP-M1C" firstAttribute="top" secondItem="z13-ls-giU" secondAttribute="bottom" constant="30" id="Ock-e7-bgQ"/>
+                            <constraint firstItem="z13-ls-giU" firstAttribute="centerX" secondItem="ruP-e0-twU" secondAttribute="centerX" id="P8j-AV-OOR"/>
+                            <constraint firstAttribute="trailing" secondItem="5uf-BF-VFx" secondAttribute="trailing" id="TPC-vV-D3I"/>
+                            <constraint firstItem="5uf-BF-VFx" firstAttribute="top" secondItem="z13-ls-giU" secondAttribute="bottom" constant="20" id="fag-ez-H3Q"/>
+                            <constraint firstItem="kis-x0-o6Q" firstAttribute="trailing" secondItem="KFh-YP-M1C" secondAttribute="trailing" constant="30" id="ghZ-zt-U5W"/>
+                            <constraint firstItem="KFh-YP-M1C" firstAttribute="top" secondItem="nTT-Fp-yCt" secondAttribute="bottom" constant="20" id="n1j-AB-PY3"/>
+                            <constraint firstItem="nTT-Fp-yCt" firstAttribute="centerX" secondItem="ruP-e0-twU" secondAttribute="centerX" id="nII-tN-dwL"/>
+                            <constraint firstAttribute="bottom" secondItem="5uf-BF-VFx" secondAttribute="bottom" id="u7A-Ua-pzV"/>
+                            <constraint firstItem="z13-ls-giU" firstAttribute="top" secondItem="nTT-Fp-yCt" secondAttribute="bottom" constant="20" id="zPA-3T-bGk"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="kis-x0-o6Q"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="P8j-AV-OOR"/>
+                                <exclude reference="D9M-3b-MA5"/>
+                                <exclude reference="Ock-e7-bgQ"/>
+                                <exclude reference="n1j-AB-PY3"/>
+                                <exclude reference="HBh-HP-euy"/>
+                                <exclude reference="fag-ez-H3Q"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="P8j-AV-OOR"/>
+                                <include reference="D9M-3b-MA5"/>
+                                <include reference="Ock-e7-bgQ"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="constraints">
+                                <include reference="n1j-AB-PY3"/>
+                                <include reference="HBh-HP-euy"/>
+                                <include reference="fag-ez-H3Q"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="osU-7M-peG"/>
+                    <navigationItem key="navigationItem" title="Inicio" id="osU-7M-peG"/>
                     <connections>
                         <segue destination="uTX-0A-iBb" kind="show" identifier="sender" id="LVH-iR-khC"/>
                     </connections>
@@ -104,10 +146,10 @@
             </objects>
             <point key="canvasLocation" x="-501" y="411"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View ControllerJ-->
         <scene sceneID="w1h-ns-Wms">
             <objects>
-                <tabBarController id="cwS-Y0-gjU" sceneMemberID="viewController">
+                <tabBarController id="cwS-Y0-gjU" customClass="TabBarViewControllerJ" customModule="DiscoveringMyCity" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lJP-mN-6FX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -137,10 +179,10 @@
         <!--AddStoryboard-->
         <scene sceneID="89d-Rk-uL4">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nMN-4o-ibj" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="AddStoryboard" id="hSh-sP-ZJE" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="QgY-U0-dFx"/>
                 </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nMN-4o-ibj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-129" y="411"/>
         </scene>
@@ -244,7 +286,7 @@
         <scene sceneID="ajm-bV-3bd">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tsq-f9-ywv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Inicio" id="Nzj-iG-FYO"/>
+                    <tabBarItem key="tabBarItem" title="Inicio" image="home" id="Nzj-iG-FYO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zYN-0C-xo5">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -260,4 +302,7 @@
             <point key="canvasLocation" x="-1124" y="16"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="home" width="30" height="30"/>
+    </resources>
 </document>
