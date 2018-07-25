@@ -31,6 +31,7 @@
 		C093025A20D90F3300A129EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C093025820D90F3300A129EE /* LaunchScreen.storyboard */; };
 		C093026520D90F3300A129EE /* DiscoveringMyCityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C093026420D90F3300A129EE /* DiscoveringMyCityTests.swift */; };
 		C093027020D90F3300A129EE /* DiscoveringMyCityUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C093026F20D90F3300A129EE /* DiscoveringMyCityUITests.swift */; };
+		C09F22C02108ACB8007FDE77 /* TabBarViewControllerJ.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09F22BF2108ACB8007FDE77 /* TabBarViewControllerJ.swift */; };
 		EC024C4D1DABD7E59A897CD0 /* Pods_DiscoveringMyCityTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1727FC3FF99A8D31B9F3A7BC /* Pods_DiscoveringMyCityTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +87,7 @@
 		C093026B20D90F3300A129EE /* DiscoveringMyCityUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiscoveringMyCityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C093026F20D90F3300A129EE /* DiscoveringMyCityUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveringMyCityUITests.swift; sourceTree = "<group>"; };
 		C093027120D90F3300A129EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C09F22BF2108ACB8007FDE77 /* TabBarViewControllerJ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewControllerJ.swift; sourceTree = "<group>"; };
 		D07A5D308037E48A28E4BC32 /* Pods-DiscoveringMyCityUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiscoveringMyCityUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DiscoveringMyCityUITests/Pods-DiscoveringMyCityUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E2AF625F5FC10E54288DBC8A /* Pods-DiscoveringMyCity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiscoveringMyCity.release.xcconfig"; path = "Pods/Target Support Files/Pods-DiscoveringMyCity/Pods-DiscoveringMyCity.release.xcconfig"; sourceTree = "<group>"; };
 		EC0139C9B965B1B51EC5B7D1 /* Pods-DiscoveringMyCityTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiscoveringMyCityTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DiscoveringMyCityTests/Pods-DiscoveringMyCityTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				B9511C7C20D935B2003FE794 /* ByProfileStoryBoard.storyboard */,
 				C005D53C210758CB0050F8DC /* ConfigurationStoryboard.storyboard */,
 				C005D53E21075B650050F8DC /* AddStoryboard.storyboard */,
+				C09F22BF2108ACB8007FDE77 /* TabBarViewControllerJ.swift */,
 			);
 			path = DiscoveringMyCity;
 			sourceTree = "<group>";
@@ -491,6 +494,7 @@
 				B910D0852100EE6D0010CBF0 /* PlaceManager.swift in Sources */,
 				B910D0762100EAE80010CBF0 /* SettingController.swift in Sources */,
 				B910D0782100ED870010CBF0 /* Category.swift in Sources */,
+				C09F22C02108ACB8007FDE77 /* TabBarViewControllerJ.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
