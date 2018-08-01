@@ -7,3 +7,18 @@
 //
 
 import Foundation
+
+
+struct CallResponseApli: Decodable {
+    
+    let results: [Place]!
+    
+}
+
+
+struct Place: Decodable {
+    
+    let name: String!
+    
+}
+
