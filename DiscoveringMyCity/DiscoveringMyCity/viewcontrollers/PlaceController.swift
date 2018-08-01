@@ -6,19 +6,9 @@
 //  Copyright © 2018 Optativa Profesional. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 
-struct CallResponseApli: Decodable {
-    
-    let results: [Place]!
-    
-}
 
 
-struct Place: Decodable {
-    
-    let name: String!
-    
-}
 

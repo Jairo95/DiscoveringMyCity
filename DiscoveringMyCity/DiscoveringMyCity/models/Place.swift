@@ -7,3 +7,32 @@
 //
 
 import Foundation
+import RealmSwift
+
+class Place: Object {
+    @objc dynamic var placeId: String?
+    @objc dynamic var name: String?
+    @objc dynamic var latitud: Double = 0.0
+    @objc dynamic var longitud: Double = 0.0
+    @objc dynamic var categoria: String?
+    @objc dynamic var imagen: String?
+    
+    override static func primaryKey() -> String? {
+        return "itemId"
+    }
+}
+
+struct CallResponseAPI: Decodable {
+    
+    let results: [PlaceAPI]!
+    
+}
+
+
+struct PlaceAPI: Decodable {
+    
+    let name: String!
+    
+}
+
+
