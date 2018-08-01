@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Mapa View Controller-->
+        <scene sceneID="ibR-Bh-6Rt">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Zc-J7-gZN" sceneMemberID="firstResponder"/>
+                <viewController id="e9r-Nm-g0K" customClass="MapaViewController" customModule="DiscoveringMyCity" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mvT-sG-BRF"/>
+                        <viewControllerLayoutGuide type="bottom" id="amo-Es-XUv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="q6t-FB-6dM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VSc-D8-F6R" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="599"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FKm-O4-F2q">
+                                <rect key="frame" x="142" y="617" width="90" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="0NL-Ru-nvb"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oOG-z1-2SI">
+                                <rect key="frame" x="160" y="617" width="54" height="30"/>
+                                <state key="normal" title="Como Ir"/>
+                                <connections>
+                                    <action selector="showDirection:" destination="e9r-Nm-g0K" eventType="touchUpInside" id="fRj-1W-63c"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FKm-O4-F2q" firstAttribute="top" secondItem="VSc-D8-F6R" secondAttribute="bottom" constant="18" id="1nm-R1-yqu"/>
+                            <constraint firstItem="FKm-O4-F2q" firstAttribute="centerX" secondItem="VSc-D8-F6R" secondAttribute="centerX" id="9MB-oT-RNo"/>
+                            <constraint firstItem="oOG-z1-2SI" firstAttribute="top" secondItem="VSc-D8-F6R" secondAttribute="bottom" constant="18" id="9fv-pN-io9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oOG-z1-2SI" secondAttribute="trailing" constant="145" id="FO1-RN-qTS"/>
+                            <constraint firstItem="FKm-O4-F2q" firstAttribute="centerX" secondItem="oOG-z1-2SI" secondAttribute="centerX" id="Kbe-6m-bv0"/>
+                            <constraint firstAttribute="bottom" secondItem="FKm-O4-F2q" secondAttribute="bottom" constant="20" symbolic="YES" id="LhM-wq-xag"/>
+                            <constraint firstAttribute="trailing" secondItem="VSc-D8-F6R" secondAttribute="trailing" id="Ra3-2T-sgW"/>
+                            <constraint firstItem="oOG-z1-2SI" firstAttribute="leading" secondItem="q6t-FB-6dM" secondAttribute="leadingMargin" constant="144" id="ZcR-rj-Bmc"/>
+                            <constraint firstItem="VSc-D8-F6R" firstAttribute="leading" secondItem="q6t-FB-6dM" secondAttribute="leading" id="jog-cB-hea"/>
+                            <constraint firstItem="FKm-O4-F2q" firstAttribute="top" secondItem="oOG-z1-2SI" secondAttribute="top" id="tAZ-5R-iqP"/>
+                            <constraint firstItem="VSc-D8-F6R" firstAttribute="top" secondItem="q6t-FB-6dM" secondAttribute="top" id="wCM-fw-7ni"/>
+                            <constraint firstItem="amo-Es-XUv" firstAttribute="top" secondItem="oOG-z1-2SI" secondAttribute="bottom" constant="20" id="xID-jw-w6s"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5ao-Mn-t28"/>
+                    </view>
+                    <connections>
+                        <outlet property="googleMaps" destination="VSc-D8-F6R" id="LG3-kG-k7f"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="284" y="116"/>
+        </scene>
+    </scenes>
+</document>
