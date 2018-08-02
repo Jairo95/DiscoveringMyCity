@@ -17,38 +17,67 @@ class HomeController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("ejecutando...........")
         let destination = segue.destination as! CategoryController
-        print("para setear")
         destination.category = category
-        print("Por dirigir")
     }
     
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func shiwCategoryHealth(_ sender: Any) {
-        let category = Category(name: "Salud")
+        let category = Category(name: "Salud", keyWord: "health", type: "health")
         self.category = category
         self.showCategory(category: category)
     }
     
     @IBAction func showCategoryRestaurant(_ sender: Any) {
-        let category = Category(name: "restaurant")
+        let category = Category(name: "Restaurantes", keyWord: "restaurant", type: "restaurant")
         self.category = category
         self.showCategory(category: category)
     }
     
+    @IBAction func showHotelCategory(_ sender: Any) {
+        let category = Category(name: "Hoteles", keyWord: "hotel", type: "hotel")
+        self.category = category
+        self.showCategory(category: category)
+    }
+    
+    @IBAction func showBar(_ sender: Any) {
+        let category = Category(name: "Bares", keyWord: "bar", type: "bar")
+        self.category = category
+        self.showCategory(category: category)
+    }
+    
+    @IBAction func showCinemas(_ sender: Any) {
+        let category = Category(name: "Cines", keyWord: "cinema", type: "cinema")
+        self.category = category
+        self.showCategory(category: category)
+    }
+    
+    @IBAction func showGasStations(_ sender: Any) {
+        let category = Category(name: "Gasolineras", keyWord: "gas station", type: "gas station")
+        self.category = category
+        self.showCategory(category: category)
+    }
+    
+    @IBAction func showSupermarkers(_ sender: Any) {
+        let category = Category(name: "Supermercados", keyWord: "super market", type: "super market")
+        self.category = category
+        self.showCategory(category: category)
+    }
+    
+    @IBAction func showBanks(_ sender: Any) {
+        let category = Category(name: "Bancos", keyWord: "bank", type: "bank")
+        self.category = category
+        self.showCategory(category: category)
+    }
 
     func showCategory(category: Category) {
-        print("Mostrar categoria")
         performSegue(withIdentifier: "sender", sender: nil)
     }
     

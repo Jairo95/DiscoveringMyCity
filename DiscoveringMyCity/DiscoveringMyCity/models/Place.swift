@@ -23,16 +23,25 @@ class Place: Object {
 }
 
 struct CallResponseAPI: Decodable {
-    
     let results: [PlaceAPI]!
-    
 }
-
 
 struct PlaceAPI: Decodable {
     
     let name: String!
+    let icon: String!
+    let vicinity: String!
+    let geometry: GeometryAPI!
     
+}
+
+struct GeometryAPI: Decodable {
+    let location: LocationAPI!
+}
+
+struct LocationAPI: Decodable {
+    let lat: Double!
+    let lng: Double!
 }
 
 

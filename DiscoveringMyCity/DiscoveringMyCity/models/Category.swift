@@ -12,5 +12,7 @@ import Foundation
 struct Category {
     
     let name: String
+    let keyWord: String
+    let type: String
     
 }

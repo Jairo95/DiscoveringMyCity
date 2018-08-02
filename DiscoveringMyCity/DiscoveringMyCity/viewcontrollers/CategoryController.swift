@@ -17,14 +17,14 @@ class CategoryController: UIViewController, UITableViewDataSource, UITableViewDe
     
     
     var category: Category!
+    var nearbyPlaces: [PlaceAPI] = []
+    
+    var posibleFavouritePlace: Place!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.categoryName.text = category?.name
-        
-        self.places.reloadData()
         searchNearbyPlaces()
     }
     
@@ -33,37 +33,27 @@ class CategoryController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return self.nearbyPlaces.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: UITableViewCell = UITableViewCell()
-        cell.textLabel?.text = "hi"
+        let index: Int = indexPath.row
+        cell.textLabel?.text = "\(self.nearbyPlaces[index].name!) - \(self.nearbyPlaces[index].vicinity!)"
         return cell
     }
     
-    
     func searchNearbyPlaces() {
-        let latitude = "-0.2097509"
-        let longitude = "-78.4951927"
-        let keyWord = "university"
-        let type = "university"
-        let radius = "1500"
+        let latitude = -0.2097509
+        let longitude = -78.4951927
+        let radius = 1500
         let key = "AIzaSyCgbvoJQ47E9jtWU9et-svG6Z3SwsXZ9ww"
-        let urlApi = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(latitude),\(longitude)&radius=\(radius)&type=\(type)&keyword=\(keyWord)&key=\(key)"
+        let searcherPlaces = SearcherPlacesManager(latitude: latitude, longitude: longitude, radius: radius, key: key)
         
-        Alamofire.request(urlApi).responseJSON { (response) in
-            guard let json = response.data else {
-                return
-            }
-            
-            guard let resultResponse = try? JSONDecoder().decode(CallResponseAPI.self, from: json) else {
-                return
-            }
-            print("\(resultResponse)")
+        searcherPlaces.findNearbyPlaces(category: category) { (callResponse) in
+            print("Resultado: \(callResponse)")
+            self.nearbyPlaces = callResponse.results
+            self.places.reloadData()
         }
-        
     }
-    
-    
 }
