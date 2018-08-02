@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cwS-Y0-gjU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cwS-Y0-gjU">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -209,6 +210,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZ7-xH-NGa">
+                                <rect key="frame" x="131" y="522" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="ThI-Yq-DEO" kind="show" id="vzl-fv-jAJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="4ep-b1-jTV"/>
@@ -216,7 +225,6 @@
                     <connections>
                         <outlet property="categoryName" destination="W7U-oa-5Wo" id="x0T-jb-Izy"/>
                         <outlet property="places" destination="H2V-cc-UlD" id="9lb-tD-taN"/>
-                        <segue destination="cxA-QS-P18" kind="show" id="diV-K7-ekM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dao-yZ-sfn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -295,6 +303,64 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jgc-JE-3vF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1124" y="16"/>
+        </scene>
+        <!--Mapa View Controller-->
+        <scene sceneID="6NJ-A1-F9A">
+            <objects>
+                <viewController id="ThI-Yq-DEO" customClass="MapaViewController" customModule="DiscoveringMyCity" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yt1-TY-7AW"/>
+                        <viewControllerLayoutGuide type="bottom" id="zWl-ed-gbA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ne7-E6-QeP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9rs-IV-Pww" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="550"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TyG-e5-rYb">
+                                <rect key="frame" x="142" y="568" width="90" height="79"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="CaU-bz-AQ9"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5M-1S-t93">
+                                <rect key="frame" x="160" y="568" width="54" height="30"/>
+                                <state key="normal" title="Como Ir"/>
+                                <connections>
+                                    <action selector="showDirection:" destination="ThI-Yq-DEO" eventType="touchUpInside" id="A1v-M7-CgO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9rs-IV-Pww" firstAttribute="leading" secondItem="ne7-E6-QeP" secondAttribute="leading" id="1pu-LU-sda"/>
+                            <constraint firstItem="TyG-e5-rYb" firstAttribute="centerX" secondItem="h5M-1S-t93" secondAttribute="centerX" id="A2f-KM-2BV"/>
+                            <constraint firstItem="h5M-1S-t93" firstAttribute="leading" secondItem="ne7-E6-QeP" secondAttribute="leadingMargin" constant="144" id="JE0-db-oOo"/>
+                            <constraint firstItem="TyG-e5-rYb" firstAttribute="top" secondItem="9rs-IV-Pww" secondAttribute="bottom" constant="18" id="KPC-dZ-wNm"/>
+                            <constraint firstItem="TyG-e5-rYb" firstAttribute="centerX" secondItem="9rs-IV-Pww" secondAttribute="centerX" id="QLV-Bj-U1q"/>
+                            <constraint firstItem="TyG-e5-rYb" firstAttribute="top" secondItem="h5M-1S-t93" secondAttribute="top" id="bcR-vw-1W6"/>
+                            <constraint firstItem="9rs-IV-Pww" firstAttribute="top" secondItem="ne7-E6-QeP" secondAttribute="top" id="d4d-1s-Fn4"/>
+                            <constraint firstAttribute="bottom" secondItem="TyG-e5-rYb" secondAttribute="bottom" constant="20" symbolic="YES" id="f2n-F0-U8o"/>
+                            <constraint firstAttribute="trailing" secondItem="9rs-IV-Pww" secondAttribute="trailing" id="iYV-UZ-a0F"/>
+                            <constraint firstItem="zWl-ed-gbA" firstAttribute="top" secondItem="h5M-1S-t93" secondAttribute="bottom" constant="20" id="jqB-H6-izi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="h5M-1S-t93" secondAttribute="trailing" constant="145" id="q3D-4v-HMw"/>
+                            <constraint firstItem="h5M-1S-t93" firstAttribute="top" secondItem="9rs-IV-Pww" secondAttribute="bottom" constant="18" id="rHG-yq-uJ3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZBO-Zx-HAC"/>
+                    </view>
+                    <connections>
+                        <outlet property="googleMaps" destination="9rs-IV-Pww" id="0vB-jE-Z6s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ypy-hn-8Ws" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2769" y="546"/>
         </scene>
     </scenes>
     <resources>
