@@ -57,7 +57,7 @@ class CategoryController: UIViewController, UITableViewDataSource, UITableViewDe
                 return
             }
             
-            guard let resultResponse = try? JSONDecoder().decode(CallResponseApli.self, from: json) else {
+            guard let resultResponse = try? JSONDecoder().decode(CallResponseAPI.self, from: json) else {
                 return
             }
             print("\(resultResponse)")

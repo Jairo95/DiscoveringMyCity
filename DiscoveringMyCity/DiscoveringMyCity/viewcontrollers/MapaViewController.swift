@@ -17,7 +17,7 @@ enum Location {
     case destinationLocation
 }
 
-class ViewController: UIViewController , GMSMapViewDelegate ,  CLLocationManagerDelegate {
+class MapaViewController: UIViewController , GMSMapViewDelegate ,  CLLocationManagerDelegate {
     
     @IBOutlet weak var googleMaps: GMSMapView!
     @IBOutlet weak var startLocation: UITextField!
@@ -222,7 +222,7 @@ class ViewController: UIViewController , GMSMapViewDelegate ,  CLLocationManager
 }
 
 // MARK: - GMS Auto Complete Delegate, for autocomplete search location
-extension ViewController: GMSAutocompleteViewControllerDelegate {
+extension MapaViewController: GMSAutocompleteViewControllerDelegate {
     
     
     

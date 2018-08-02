@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0B670F1C4A5F3D71A68A370A /* Pods_DiscoveringMyCityUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16593EF9FB855AB87AFEB9E8 /* Pods_DiscoveringMyCityUITests.framework */; };
 		A91553754AA974262D11C9E9 /* Pods_DiscoveringMyCity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ABD0EB644D51CC24D25AC0B /* Pods_DiscoveringMyCity.framework */; };
-		AA11045B211209B700D35DE0 /* MapStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA11045A211209B700D35DE0 /* MapStoryboard.storyboard */; };
 		AA11046121120CED00D35DE0 /* MapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA11046021120CED00D35DE0 /* MapaViewController.swift */; };
 		B910D06E2100EA7C0010CBF0 /* CategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B910D06D2100EA7C0010CBF0 /* CategoryController.swift */; };
 		B910D0702100EA920010CBF0 /* PlaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B910D06F2100EA920010CBF0 /* PlaceController.swift */; };
@@ -60,7 +59,6 @@
 		1ABD0EB644D51CC24D25AC0B /* Pods_DiscoveringMyCity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiscoveringMyCity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6767DC9558F65456AED8F076 /* Pods-DiscoveringMyCityUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiscoveringMyCityUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DiscoveringMyCityUITests/Pods-DiscoveringMyCityUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		780B1369F1558772E0D30C23 /* Pods-DiscoveringMyCityTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiscoveringMyCityTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DiscoveringMyCityTests/Pods-DiscoveringMyCityTests.release.xcconfig"; sourceTree = "<group>"; };
-		AA11045A211209B700D35DE0 /* MapStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapStoryboard.storyboard; sourceTree = "<group>"; };
 		AA11046021120CED00D35DE0 /* MapaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapaViewController.swift; sourceTree = "<group>"; };
 		AA11046421120DC600D35DE0 /* Google Direction-07674dbf8433.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Google Direction-07674dbf8433.json"; sourceTree = "<group>"; };
 		B910D06D2100EA7C0010CBF0 /* CategoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryController.swift; sourceTree = "<group>"; };
@@ -129,6 +127,7 @@
 		B910D06B2100EA370010CBF0 /* viewcontrollers */ = {
 			isa = PBXGroup;
 			children = (
+				AA11046021120CED00D35DE0 /* MapaViewController.swift */,
 				C093025120D90F3200A129EE /* HomeController.swift */,
 				B910D06D2100EA7C0010CBF0 /* CategoryController.swift */,
 				B910D06F2100EA920010CBF0 /* PlaceController.swift */,
@@ -210,9 +209,7 @@
 				B9511C7C20D935B2003FE794 /* ByProfileStoryBoard.storyboard */,
 				C005D53C210758CB0050F8DC /* ConfigurationStoryboard.storyboard */,
 				C005D53E21075B650050F8DC /* AddStoryboard.storyboard */,
-				AA11045A211209B700D35DE0 /* MapStoryboard.storyboard */,
 				C09F22BF2108ACB8007FDE77 /* TabBarViewControllerJ.swift */,
-				AA11046021120CED00D35DE0 /* MapaViewController.swift */,
 			);
 			path = DiscoveringMyCity;
 			sourceTree = "<group>";
@@ -360,7 +357,6 @@
 				C093025A20D90F3300A129EE /* LaunchScreen.storyboard in Resources */,
 				C093025720D90F3300A129EE /* Assets.xcassets in Resources */,
 				C005D53F21075B650050F8DC /* AddStoryboard.storyboard in Resources */,
-				AA11045B211209B700D35DE0 /* MapStoryboard.storyboard in Resources */,
 				C005D53D210758CB0050F8DC /* ConfigurationStoryboard.storyboard in Resources */,
 				B9511C7D20D935B2003FE794 /* ByProfileStoryBoard.storyboard in Resources */,
 				C093025520D90F3300A129EE /* Main.storyboard in Resources */,
