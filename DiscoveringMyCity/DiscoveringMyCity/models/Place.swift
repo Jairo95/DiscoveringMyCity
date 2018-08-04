@@ -12,13 +12,13 @@ import RealmSwift
 class Place: Object {
     @objc dynamic var placeId: String?
     @objc dynamic var name: String?
-    @objc dynamic var latitud: Double = 0.0
-    @objc dynamic var longitud: Double = 0.0
-    @objc dynamic var categoria: String?
-    @objc dynamic var imagen: String?
+    @objc dynamic var latitude: Double = 0.0
+    @objc dynamic var longitude: Double = 0.0
+    @objc dynamic var category: String?
+    @objc dynamic var image: String?
     
     override static func primaryKey() -> String? {
-        return "itemId"
+        return "placeId"
     }
 }
 

@@ -24,7 +24,8 @@ class MapaViewController: UIViewController , GMSMapViewDelegate ,  CLLocationMan
     @IBOutlet weak var destinationLocation: UITextField!
     
     
-    
+    var place: Place!
+    var myPosition: Place!
     
     
     
@@ -42,16 +43,20 @@ class MapaViewController: UIViewController , GMSMapViewDelegate ,  CLLocationMan
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("Lugar seleccionado: \(place), Mi posicion: \(myPosition)")
+        
         locationManager = CLLocationManager()
         locationManager.delegate = self
+        /*
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startMonitoringSignificantLocationChanges()
-        
+        */
         
         //Your map initiation code
         let camera = GMSCameraPosition.camera(withLatitude: -0.1862505, longitude: -78.4886912, zoom: 15.0)
+        print("camara")
         
         //let camera = GMSCameraPosition.camera(self)
         
@@ -61,6 +66,7 @@ class MapaViewController: UIViewController , GMSMapViewDelegate ,  CLLocationMan
         self.googleMaps.settings.myLocationButton = true
         self.googleMaps.settings.compassButton = true
         self.googleMaps.settings.zoomGestures = true
+        print("Activando google maps")
         
         
     }

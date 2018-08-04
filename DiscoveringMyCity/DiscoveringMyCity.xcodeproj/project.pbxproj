@@ -22,6 +22,7 @@
 		B910D0802100EE260010CBF0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B910D07F2100EE260010CBF0 /* User.swift */; };
 		B910D0832100EE5E0010CBF0 /* CategoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B910D0822100EE5E0010CBF0 /* CategoryManager.swift */; };
 		B910D0852100EE6D0010CBF0 /* PlaceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B910D0842100EE6D0010CBF0 /* PlaceManager.swift */; };
+		B911492A21162D8300F6BE75 /* PlaceItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B911492921162D8300F6BE75 /* PlaceItemCell.swift */; };
 		B9511C7D20D935B2003FE794 /* ByProfileStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9511C7C20D935B2003FE794 /* ByProfileStoryBoard.storyboard */; };
 		C005D53D210758CB0050F8DC /* ConfigurationStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C005D53C210758CB0050F8DC /* ConfigurationStoryboard.storyboard */; };
 		C005D53F21075B650050F8DC /* AddStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C005D53E21075B650050F8DC /* AddStoryboard.storyboard */; };
@@ -73,6 +74,7 @@
 		B910D07F2100EE260010CBF0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B910D0822100EE5E0010CBF0 /* CategoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryManager.swift; sourceTree = "<group>"; };
 		B910D0842100EE6D0010CBF0 /* PlaceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceManager.swift; sourceTree = "<group>"; };
+		B911492921162D8300F6BE75 /* PlaceItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceItemCell.swift; sourceTree = "<group>"; };
 		B9511C7C20D935B2003FE794 /* ByProfileStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ByProfileStoryBoard.storyboard; sourceTree = "<group>"; };
 		BA41E780A3F1A079AE944FF3 /* Pods-DiscoveringMyCity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiscoveringMyCity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DiscoveringMyCity/Pods-DiscoveringMyCity.debug.xcconfig"; sourceTree = "<group>"; };
 		C005D53C210758CB0050F8DC /* ConfigurationStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ConfigurationStoryboard.storyboard; sourceTree = "<group>"; };
@@ -159,6 +161,14 @@
 			path = managers;
 			sourceTree = "<group>";
 		};
+		B911492821162CC100F6BE75 /* customs */ = {
+			isa = PBXGroup;
+			children = (
+				B911492921162D8300F6BE75 /* PlaceItemCell.swift */,
+			);
+			path = customs;
+			sourceTree = "<group>";
+		};
 		BFE8685C0EA32586DDBFC3A2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +207,7 @@
 		C093024E20D90F3200A129EE /* DiscoveringMyCity */ = {
 			isa = PBXGroup;
 			children = (
+				B911492821162CC100F6BE75 /* customs */,
 				B910D0812100EE3A0010CBF0 /* managers */,
 				B910D06C2100EA470010CBF0 /* models */,
 				B910D06B2100EA370010CBF0 /* viewcontrollers */,
@@ -490,6 +501,7 @@
 				B910D0722100EAB20010CBF0 /* ProfileController.swift in Sources */,
 				B910D07C2100EDF20010CBF0 /* Profile.swift in Sources */,
 				C093025220D90F3200A129EE /* HomeController.swift in Sources */,
+				B911492A21162D8300F6BE75 /* PlaceItemCell.swift in Sources */,
 				B910D0742100EAD10010CBF0 /* AddFavoritePlaceController.swift in Sources */,
 				B910D0702100EA920010CBF0 /* PlaceController.swift in Sources */,
 				C093025020D90F3200A129EE /* AppDelegate.swift in Sources */,

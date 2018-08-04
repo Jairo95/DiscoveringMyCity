@@ -9,6 +9,7 @@
 import Foundation
 import RealmSwift
 import Alamofire
+import AlamofireImage
 
 class PlaceManager {
     var places:[Place] = []
@@ -27,10 +28,10 @@ class PlaceManager {
         let item = Place()
         item.placeId = "\(UUID())"
         item.name = name
-        item.latitud = latitud!
-        item.longitud = longitud!
-        item.categoria = categoria
-        item.imagen = imagen
+        item.latitude = latitud!
+        item.longitude = longitud!
+        item.category = categoria
+        item.image = imagen
         
         try! realm.write {
             realm.add(item)
@@ -75,7 +76,15 @@ class SearcherPlacesManager {
         
             completion(resultResponse)
         }
-        
+    }
+    
+    
+    func downloadImage(imageUrl: String, completion: @escaping (UIImage) -> ()) {
+        Alamofire.request(imageUrl).responseImage { (response) in
+            if let image: UIImage = response.result.value {
+                completion(image)
+            }
+        }
     }
     
 }

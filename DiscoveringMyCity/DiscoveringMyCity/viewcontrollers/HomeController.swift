@@ -60,13 +60,13 @@ class HomeController: UIViewController {
     }
     
     @IBAction func showGasStations(_ sender: Any) {
-        let category = Category(name: "Gasolineras", keyWord: "gas station", type: "gas station")
+        let category = Category(name: "Gasolineras", keyWord: "gasstation", type: "gasstation")
         self.category = category
         self.showCategory(category: category)
     }
     
     @IBAction func showSupermarkers(_ sender: Any) {
-        let category = Category(name: "Supermercados", keyWord: "super market", type: "super market")
+        let category = Category(name: "Supermercados", keyWord: "supermarket", type: "supermarket")
         self.category = category
         self.showCategory(category: category)
     }
