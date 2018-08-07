@@ -10,7 +10,6 @@ import UIKit
 
 class ProfileController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    
     @IBOutlet weak var favoritesTableView: UITableView!
     var placeManager = PlaceManager()
     
@@ -33,11 +32,25 @@ class ProfileController: UIViewController, UITableViewDelegate, UITableViewDataS
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "favoritecell") as! FavoritesTableViewCell
         
-        /*cell.cityLabel.text = itemManager.item[indexPath.row].cityName
-        cell.descriptionLabel.text = itemManager.item[indexPath.row].itemDescription
-        */
+        cell.nameLabel.text = placeManager.places[indexPath.row].name
+        cell.categoryLabel.text = placeManager.places[indexPath.row].category
+        //cell.favimageView = placeManager.places[indexPath.row].image
+        
         
         return cell
+    }
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        placeManager.updateArrays()
+        favoritesTableView.reloadData()
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
     }
     
     

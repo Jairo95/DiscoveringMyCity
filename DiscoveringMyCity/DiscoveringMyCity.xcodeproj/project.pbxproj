@@ -222,8 +222,8 @@
 				B9511C7C20D935B2003FE794 /* ByProfileStoryBoard.storyboard */,
 				C005D53C210758CB0050F8DC /* ConfigurationStoryboard.storyboard */,
 				C005D53E21075B650050F8DC /* AddStoryboard.storyboard */,
-				C09F22BF2108ACB8007FDE77 /* TabBarViewControllerJ.swift */,
 				C030BE902119DBDF00FEE3A9 /* FavoritesTableViewCell.swift */,
+				C09F22BF2108ACB8007FDE77 /* TabBarViewControllerJ.swift */,
 			);
 			path = DiscoveringMyCity;
 			sourceTree = "<group>";
