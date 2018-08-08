@@ -88,7 +88,7 @@
                                 <variation key="heightClass=regular" axis="vertical"/>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Encuentra lugares cerca de ti..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nTT-Fp-yCt">
-                                <rect key="frame" x="22" y="79" width="330" height="100"/>
+                                <rect key="frame" x="20" y="79" width="335" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="09c-V5-zZ9"/>
                                 </constraints>
@@ -100,6 +100,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="nTT-Fp-yCt" firstAttribute="top" secondItem="kis-x0-o6Q" secondAttribute="top" constant="15" id="0jK-FM-Kyu"/>
+                            <constraint firstItem="nTT-Fp-yCt" firstAttribute="leading" secondItem="kis-x0-o6Q" secondAttribute="leading" constant="20" id="5W9-8Q-loZ"/>
                             <constraint firstItem="KFh-YP-M1C" firstAttribute="centerX" secondItem="ruP-e0-twU" secondAttribute="centerX" id="D9M-3b-MA5"/>
                             <constraint firstItem="z13-ls-giU" firstAttribute="leading" secondItem="kis-x0-o6Q" secondAttribute="leading" constant="30" id="KrZ-px-H0s"/>
                             <constraint firstItem="KFh-YP-M1C" firstAttribute="top" secondItem="z13-ls-giU" secondAttribute="bottom" constant="30" id="Ock-e7-bgQ"/>
@@ -108,6 +109,7 @@
                             <constraint firstItem="KFh-YP-M1C" firstAttribute="top" secondItem="nTT-Fp-yCt" secondAttribute="bottom" constant="20" id="n1j-AB-PY3"/>
                             <constraint firstItem="nTT-Fp-yCt" firstAttribute="centerX" secondItem="ruP-e0-twU" secondAttribute="centerX" id="nII-tN-dwL"/>
                             <constraint firstItem="kis-x0-o6Q" firstAttribute="bottom" secondItem="KFh-YP-M1C" secondAttribute="bottom" constant="20" id="od5-uk-k2u"/>
+                            <constraint firstItem="kis-x0-o6Q" firstAttribute="trailing" secondItem="nTT-Fp-yCt" secondAttribute="trailing" constant="20" id="rGl-Uh-0oI"/>
                             <constraint firstItem="kis-x0-o6Q" firstAttribute="bottom" secondItem="z13-ls-giU" secondAttribute="bottom" constant="20" id="xhV-HV-83H"/>
                             <constraint firstItem="z13-ls-giU" firstAttribute="top" secondItem="nTT-Fp-yCt" secondAttribute="bottom" constant="20" id="zPA-3T-bGk"/>
                         </constraints>
