@@ -30,13 +30,17 @@ class ProfileController: UIViewController, UITableViewDelegate, UITableViewDataS
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "favoritecell") as! FavoritesTableViewCell
-        
-        cell.nameLabel.text = placeManager.places[indexPath.row].name
-        cell.categoryLabel.text = placeManager.places[indexPath.row].category
-        //cell.favimageView = placeManager.places[indexPath.row].image
+      
+        let cell = tableView.dequeueReusableCell(withIdentifier: "favoritescell") as! FavoritesTableViewCell
         
         
+        cell.nameLabel?.text = placeManager.places[indexPath.row].name
+        
+        cell.categoryLabel?.text = placeManager.places[indexPath.row].category
+        print("Hope")
+        /*let cell = UITableViewCell()
+        cell.textLabel?.text = placeManager.places[indexPath.row].name
+        */
         return cell
     }
 

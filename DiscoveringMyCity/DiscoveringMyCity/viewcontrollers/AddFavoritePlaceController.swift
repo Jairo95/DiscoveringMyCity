@@ -17,6 +17,7 @@ class AddFavoritePlaceController: UIViewController, UINavigationControllerDelega
     @IBOutlet weak var longitudField: UITextField!
     @IBOutlet weak var imagenView: UIImageView!
     
+    let placeManager = PlaceManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +50,11 @@ class AddFavoritePlaceController: UIViewController, UINavigationControllerDelega
     }
     
     @IBAction func saveButton(_ sender: Any) {
+        let imageData:NSData = UIImagePNGRepresentation(imagenView.image!)! as NSData
+        let strBase64 = imageData.base64EncodedString(options: .lineLength64Characters)
+        //print(strBase64)
+
+        placeManager.addFavoritePlace(name: nameField.text!, latitud: Double(latitudField.text!), longitud: Double(longitudField.text!), categoria: categoryField.text!, imagen: strBase64)
     }
     
 }

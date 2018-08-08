@@ -27,10 +27,10 @@ class TabBarViewControllerJ: UITabBarController {
     
     func configTabBar(){
         let items = tabBar.items
-        items?[1].title = "Perfil"
+        items?[1].title = "Favoritos"
         items?[2].title = "Añadir"
         items?[3].title = "Configuración"
-        items?[1].image = #imageLiteral(resourceName: "user_male")
+        items?[1].image = #imageLiteral(resourceName: "heart")
         items?[2].image = #imageLiteral(resourceName: "plus")
         items?[3].image = #imageLiteral(resourceName: "services")
         
