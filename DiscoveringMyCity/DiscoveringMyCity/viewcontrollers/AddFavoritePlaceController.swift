@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import GoogleMaps
 
-class AddFavoritePlaceController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class AddFavoritePlaceController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, CLLocationManagerDelegate {
     
     
     @IBOutlet weak var nameField: UITextField!
@@ -16,11 +17,23 @@ class AddFavoritePlaceController: UIViewController, UINavigationControllerDelega
     @IBOutlet weak var latitudField: UITextField!
     @IBOutlet weak var longitudField: UITextField!
     @IBOutlet weak var imagenView: UIImageView!
+    var myPosition: Place!
+    var locationManager = CLLocationManager()
     
     let placeManager = PlaceManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initLocation()
+    }
+    
+    func initLocation() {
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.startMonitoringSignificantLocationChanges()
     }
     
     @IBAction func photoButton(_ sender: Any) {
@@ -47,6 +60,20 @@ class AddFavoritePlaceController: UIViewController, UINavigationControllerDelega
     }
     
     @IBAction func locationButton(_ sender: Any) {
+        latitudField.text = "\(self.myPosition.latitude)"
+        longitudField.text = "\(self.myPosition.longitude)"
+    }
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location: CLLocationCoordinate2D = manager.location?.coordinate else {
+            return
+        }
+        
+        self.myPosition = Place()
+        self.myPosition.latitude = location.latitude
+        self.myPosition.longitude = location.longitude
+        
+        print("[MY POSITION]: \(myPosition)")
+        
     }
     
     @IBAction func saveButton(_ sender: Any) {
