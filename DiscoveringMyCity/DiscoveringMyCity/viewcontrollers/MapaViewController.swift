@@ -24,7 +24,7 @@ class MapaViewController: UIViewController , GMSMapViewDelegate {
     
     var place: Place!
     var myPosition: Place!
-    
+    let placeManager = PlaceManager()
 
     
     override func viewDidLoad() {
@@ -56,7 +56,14 @@ class MapaViewController: UIViewController , GMSMapViewDelegate {
         marker.map = googleMaps
     }
     
-
+    @IBAction func addFavoriteButton(_ sender: Any) {
+        /*let imageData:NSData = UIImagePNGRepresentation(imagenView.image!)! as NSData
+        let strBase64 = imageData.base64EncodedString(options: .lineLength64Characters)
+        //print(strBase64)
+        */
+        placeManager.addFavoritePlace(name: place.name, latitud: place.latitude, longitud: place.longitude, categoria: place.category, imagen: "")
+    }
+    
     
     func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
         print("COORDINATE \(coordinate)") // when you tapped coordinate
@@ -69,7 +76,7 @@ class MapaViewController: UIViewController , GMSMapViewDelegate {
         let destination = "\(place.latitude),\(place.longitude)"
         
         
-        let url = "https://maps.googleapis.com/maps/api/directions/json?origin=\(origin)&destination=\(destination)&mode=driving"
+        let url = "https://maps.googleapis.com/maps/api/directions/json?origin=\(origin)&destination=\(destination)&mode=driving&key=AIzaSyCgbvoJQ47E9jtWU9et-svG6Z3SwsXZ9ww"
         print("RUTA: \(url)")
         
         Alamofire.request(url).responseJSON { response in

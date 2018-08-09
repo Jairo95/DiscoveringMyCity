@@ -313,7 +313,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9rs-IV-Pww" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="599"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="577"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TyG-e5-rYb">
@@ -325,15 +325,24 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="04I-Di-QS2">
+                                <rect key="frame" x="126" y="582" width="123" height="30"/>
+                                <state key="normal" title="Añadir a Favoritos"/>
+                                <connections>
+                                    <action selector="addFavoriteButton:" destination="ThI-Yq-DEO" eventType="touchUpInside" id="BIX-mq-TIU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="9rs-IV-Pww" firstAttribute="leading" secondItem="ne7-E6-QeP" secondAttribute="leading" id="1pu-LU-sda"/>
-                            <constraint firstItem="TyG-e5-rYb" firstAttribute="top" secondItem="9rs-IV-Pww" secondAttribute="bottom" constant="18" id="KPC-dZ-wNm"/>
+                            <constraint firstItem="04I-Di-QS2" firstAttribute="top" secondItem="9rs-IV-Pww" secondAttribute="bottom" constant="5" id="4h3-eL-4tH"/>
+                            <constraint firstItem="TyG-e5-rYb" firstAttribute="top" secondItem="04I-Di-QS2" secondAttribute="bottom" constant="5" id="CoJ-bk-baz"/>
                             <constraint firstItem="TyG-e5-rYb" firstAttribute="centerX" secondItem="9rs-IV-Pww" secondAttribute="centerX" id="QLV-Bj-U1q"/>
                             <constraint firstItem="9rs-IV-Pww" firstAttribute="top" secondItem="ne7-E6-QeP" secondAttribute="top" id="d4d-1s-Fn4"/>
                             <constraint firstAttribute="bottom" secondItem="TyG-e5-rYb" secondAttribute="bottom" constant="20" symbolic="YES" id="f2n-F0-U8o"/>
                             <constraint firstAttribute="trailing" secondItem="9rs-IV-Pww" secondAttribute="trailing" id="iYV-UZ-a0F"/>
+                            <constraint firstItem="04I-Di-QS2" firstAttribute="centerX" secondItem="ne7-E6-QeP" secondAttribute="centerX" id="sff-rR-V4L"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZBO-Zx-HAC"/>
                     </view>
@@ -343,7 +352,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ypy-hn-8Ws" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2564" y="-212"/>
+            <point key="canvasLocation" x="-2564" y="-212.74362818590706"/>
         </scene>
     </scenes>
     <resources>
