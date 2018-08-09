@@ -7,14 +7,24 @@
 //
 
 import UIKit
+import Alamofire
+import GoogleMaps
 
-class ProfileController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ProfileController: UIViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate {
     
     @IBOutlet weak var favoritesTableView: UITableView!
     var placeManager = PlaceManager()
+    var locationManager = CLLocationManager()
+    
+    var category: Category!
+    
+    var posibleFavouritePlace: Place!
+    var myPosition: Place!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initLocation()
         placeManager.updateArrays()
         favoritesTableView.reloadData()
         // Do any additional setup after loading the view.
@@ -43,6 +53,31 @@ class ProfileController: UIViewController, UITableViewDelegate, UITableViewDataS
         */
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as! mapa2ViewController
+        destination.place = posibleFavouritePlace
+        destination.myPosition = myPosition
+    }
+    
+    
+    
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        let placeSelected = placeManager.places[indexPath.row]
+        
+        self.posibleFavouritePlace = Place()
+        self.posibleFavouritePlace.name = placeSelected.name
+        self.posibleFavouritePlace.latitude = placeSelected.latitude
+        self.posibleFavouritePlace.longitude = placeSelected.longitude
+        self.posibleFavouritePlace.category = placeSelected.category
+        self.posibleFavouritePlace.image = placeSelected.image
+        
+        performSegue(withIdentifier: "MapaFavorito", sender: nil)
+        
+        return indexPath
+    }
+    
+    
 
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -56,6 +91,38 @@ class ProfileController: UIViewController, UITableViewDelegate, UITableViewDataS
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
+    
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location: CLLocationCoordinate2D = manager.location?.coordinate else {
+            return
+        }
+        
+        self.myPosition = Place()
+        self.myPosition.latitude = location.latitude
+        self.myPosition.longitude = location.longitude
+        
+        print("[MY POSITION]: \(myPosition)")
+
+    }
+    
+    
+    func initLocation() {
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.startMonitoringSignificantLocationChanges()
+    }
+    
+    
+    
+    
+    
+    
+    
+    
     
     
 }

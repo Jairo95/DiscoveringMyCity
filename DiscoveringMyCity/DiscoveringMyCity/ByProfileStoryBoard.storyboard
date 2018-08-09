@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rc2-bG-f55">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fqu-FW-PUD">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -84,13 +84,67 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lUh-QY-GxW"/>
                     </view>
+                    <navigationItem key="navigationItem" id="fQo-Xr-7Qw"/>
                     <connections>
                         <outlet property="favoritesTableView" destination="thS-wM-e2Y" id="Xls-wh-8pX"/>
+                        <segue destination="0xM-9w-rvr" kind="show" identifier="MapaFavorito" id="oL7-l1-PHd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ci8-9v-fNF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7.2000000000000002" y="117.39130434782609"/>
+            <point key="canvasLocation" x="332" y="117.39130434782609"/>
+        </scene>
+        <!--Mapa2 View Controller-->
+        <scene sceneID="mOv-a0-Lzd">
+            <objects>
+                <viewController id="0xM-9w-rvr" customClass="mapa2ViewController" customModule="DiscoveringMyCity" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3OX-Z3-QEC"/>
+                        <viewControllerLayoutGuide type="bottom" id="HsL-R5-YWk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bni-fQ-0uo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QDG-Nf-Mml" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HsL-R5-YWk" firstAttribute="top" secondItem="QDG-Nf-Mml" secondAttribute="bottom" id="5jj-b1-ybs"/>
+                            <constraint firstItem="QDG-Nf-Mml" firstAttribute="top" secondItem="3OX-Z3-QEC" secondAttribute="bottom" id="DHh-ih-suq"/>
+                            <constraint firstItem="QDG-Nf-Mml" firstAttribute="leading" secondItem="bni-fQ-0uo" secondAttribute="leading" id="hhU-cp-rwf"/>
+                            <constraint firstAttribute="trailing" secondItem="QDG-Nf-Mml" secondAttribute="trailing" id="tTT-eC-Tpe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Y9X-gs-l2F"/>
+                    </view>
+                    <connections>
+                        <outlet property="googleMaps" destination="QDG-Nf-Mml" id="h0Z-i6-gOu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iV6-J0-1WN" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1096.8" y="116.49175412293854"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="knj-dy-EPK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fqu-FW-PUD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xyV-fb-d8o">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Rc2-bG-f55" kind="relationship" relationship="rootViewController" id="mpn-cY-BzH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="waQ-ET-iCQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-450" y="103"/>
         </scene>
     </scenes>
 </document>
