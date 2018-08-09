@@ -10,6 +10,7 @@
 		0B670F1C4A5F3D71A68A370A /* Pods_DiscoveringMyCityUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16593EF9FB855AB87AFEB9E8 /* Pods_DiscoveringMyCityUITests.framework */; };
 		A91553754AA974262D11C9E9 /* Pods_DiscoveringMyCity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ABD0EB644D51CC24D25AC0B /* Pods_DiscoveringMyCity.framework */; };
 		AA11046121120CED00D35DE0 /* MapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA11046021120CED00D35DE0 /* MapaViewController.swift */; };
+		AADD182A211CB5790067F705 /* mapa2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD1829211CB5790067F705 /* mapa2ViewController.swift */; };
 		B910D06E2100EA7C0010CBF0 /* CategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B910D06D2100EA7C0010CBF0 /* CategoryController.swift */; };
 		B910D0702100EA920010CBF0 /* PlaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B910D06F2100EA920010CBF0 /* PlaceController.swift */; };
 		B910D0722100EAB20010CBF0 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B910D0712100EAB20010CBF0 /* ProfileController.swift */; };
@@ -63,6 +64,7 @@
 		780B1369F1558772E0D30C23 /* Pods-DiscoveringMyCityTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiscoveringMyCityTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DiscoveringMyCityTests/Pods-DiscoveringMyCityTests.release.xcconfig"; sourceTree = "<group>"; };
 		AA11046021120CED00D35DE0 /* MapaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapaViewController.swift; sourceTree = "<group>"; };
 		AA11046421120DC600D35DE0 /* Google Direction-07674dbf8433.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Google Direction-07674dbf8433.json"; sourceTree = "<group>"; };
+		AADD1829211CB5790067F705 /* mapa2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapa2ViewController.swift; sourceTree = "<group>"; };
 		B910D06D2100EA7C0010CBF0 /* CategoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryController.swift; sourceTree = "<group>"; };
 		B910D06F2100EA920010CBF0 /* PlaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceController.swift; sourceTree = "<group>"; };
 		B910D0712100EAB20010CBF0 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				B910D0712100EAB20010CBF0 /* ProfileController.swift */,
 				B910D0732100EAD10010CBF0 /* AddFavoritePlaceController.swift */,
 				B910D0752100EAE80010CBF0 /* SettingController.swift */,
+				AADD1829211CB5790067F705 /* mapa2ViewController.swift */,
 			);
 			path = viewcontrollers;
 			sourceTree = "<group>";
@@ -513,6 +516,7 @@
 				B910D06E2100EA7C0010CBF0 /* CategoryController.swift in Sources */,
 				B910D0802100EE260010CBF0 /* User.swift in Sources */,
 				B910D0832100EE5E0010CBF0 /* CategoryManager.swift in Sources */,
+				AADD182A211CB5790067F705 /* mapa2ViewController.swift in Sources */,
 				AA11046121120CED00D35DE0 /* MapaViewController.swift in Sources */,
 				B910D07A2100EDA70010CBF0 /* Place.swift in Sources */,
 				B910D0852100EE6D0010CBF0 /* PlaceManager.swift in Sources */,
