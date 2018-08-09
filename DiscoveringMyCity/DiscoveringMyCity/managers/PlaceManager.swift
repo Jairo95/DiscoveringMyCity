@@ -41,6 +41,14 @@ class PlaceManager {
     func updateArrays(){
         places = Array(realm.objects(Place.self))
     }
+    
+    func downloadImage(imageUrl: String, completion: @escaping (UIImage) -> ()) {
+        Alamofire.request(imageUrl).responseImage { (response) in
+            if let image: UIImage = response.result.value {
+                completion(image)
+            }
+        }
+    }
 }
 
 

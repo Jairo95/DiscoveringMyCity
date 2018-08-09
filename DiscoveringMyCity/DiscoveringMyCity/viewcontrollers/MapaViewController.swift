@@ -21,11 +21,11 @@ class MapaViewController: UIViewController , GMSMapViewDelegate {
     
     @IBOutlet weak var googleMaps: GMSMapView!
     
+    @IBOutlet weak var placeImageView: UIImageView!
     
     var place: Place!
     var myPosition: Place!
     let placeManager = PlaceManager()
-
     
     override func viewDidLoad() {
   
@@ -44,6 +44,13 @@ class MapaViewController: UIViewController , GMSMapViewDelegate {
         self.googleMaps.settings.zoomGestures = true
         
         self.drawPath(startLocation: myPosition, endLocation: place)
+        self.placeManager.downloadImage(imageUrl: (self.place.image)!, completion: { (imageR) in
+            
+            DispatchQueue.main.async {
+                self.placeImageView.image = imageR
+            }
+            
+        })
         
     }
     
@@ -57,10 +64,10 @@ class MapaViewController: UIViewController , GMSMapViewDelegate {
     }
     
     @IBAction func addFavoriteButton(_ sender: Any) {
-        /*let imageData:NSData = UIImagePNGRepresentation(imagenView.image!)! as NSData
+        let imageData:NSData = UIImagePNGRepresentation(placeImageView.image!)! as NSData
         let strBase64 = imageData.base64EncodedString(options: .lineLength64Characters)
         //print(strBase64)
-        */
+        
         placeManager.addFavoritePlace(name: place.name, latitud: place.latitude, longitud: place.longitude, categoria: place.category, imagen: "")
     }
     
