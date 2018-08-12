@@ -23,6 +23,8 @@ class MapaViewController: UIViewController , GMSMapViewDelegate {
     
     @IBOutlet weak var placeImageView: UIImageView!
     
+    @IBOutlet weak var NombreLabel: UILabel!
+    
     var place: Place!
     var myPosition: Place!
     let placeManager = PlaceManager()
@@ -42,6 +44,8 @@ class MapaViewController: UIViewController , GMSMapViewDelegate {
         self.googleMaps.settings.myLocationButton = true
         self.googleMaps.settings.compassButton = true
         self.googleMaps.settings.zoomGestures = true
+        
+        self.NombreLabel.text = place.name
         
         self.drawPath(startLocation: myPosition, endLocation: place)
         self.placeManager.downloadImage(imageUrl: (self.place.image)!, completion: { (imageR) in
@@ -68,7 +72,7 @@ class MapaViewController: UIViewController , GMSMapViewDelegate {
         let strBase64 = imageData.base64EncodedString(options: .lineLength64Characters)
         //print(strBase64)
         
-        placeManager.addFavoritePlace(name: place.name, latitud: place.latitude, longitud: place.longitude, categoria: place.category, imagen: "")
+        placeManager.addFavoritePlace(name: place.name, latitud: place.latitude, longitud: place.longitude, categoria: place.category, imagen: strBase64)
     }
     
     

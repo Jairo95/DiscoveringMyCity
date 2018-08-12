@@ -21,7 +21,6 @@ class ProfileController: UIViewController, UITableViewDelegate, UITableViewDataS
     var posibleFavouritePlace: Place!
     var myPosition: Place!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         initLocation()

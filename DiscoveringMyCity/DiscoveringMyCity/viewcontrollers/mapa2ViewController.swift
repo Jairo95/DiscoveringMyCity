@@ -15,14 +15,13 @@ import Alamofire
 
 class mapa2ViewController: UIViewController, GMSMapViewDelegate {
     
-    
-    
+    @IBOutlet weak var NamePlace: UILabel!
+    @IBOutlet weak var placeImageView: UIImageView!
     @IBOutlet weak var googleMaps: GMSMapView!
     
     var place: Place!
     var myPosition: Place!
     let placeManager = PlaceManager()
-    
     
     
     override func viewDidLoad() {
@@ -42,6 +41,13 @@ class mapa2ViewController: UIViewController, GMSMapViewDelegate {
         self.googleMaps.settings.myLocationButton = true
         self.googleMaps.settings.compassButton = true
         self.googleMaps.settings.zoomGestures = true
+        
+        let strBase64 = place.image
+        let dataDecoded : Data = Data(base64Encoded: strBase64!, options: .ignoreUnknownCharacters)!
+        let decodedimage = UIImage(data: dataDecoded)
+        placeImageView.image = decodedimage
+        
+        NamePlace.text = place.name
         
         self.drawPath(startLocation: myPosition, endLocation: place)
         
